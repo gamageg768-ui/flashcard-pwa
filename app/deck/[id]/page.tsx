@@ -10,6 +10,7 @@ import {
 import Navbar from '@/components/Navbar';
 import ImportCSVModal from '@/components/ImportCSVModal';
 import ExportButton from '@/components/ExportButton';
+import LeitnerBoxView from '@/components/LeitnerBoxView';
 import { getDifficultyLabel, getDifficultyColor } from '@/lib/utils';
 
 interface Card {
@@ -166,6 +167,11 @@ export default function DeckDetailPage() {
             <ExportButton deckId={id as string} deckTitle={deck.title} />
           </div>
         </div>
+
+        {/* Leitner box visualization */}
+        {deck.cards.length > 0 && (
+          <LeitnerBoxView cards={deck.cards} />
+        )}
 
         {/* Notes panel */}
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm mb-6">

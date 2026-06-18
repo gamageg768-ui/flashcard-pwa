@@ -7,6 +7,7 @@ import {
   ThumbsDown, Minus, ThumbsUp, Zap, Loader2, X, Send
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import PomodoroTimer from '@/components/PomodoroTimer';
 
 interface Card {
   id: string;
@@ -205,7 +206,7 @@ export default function StudyPage() {
       <Navbar />
 
       <main className="max-w-2xl mx-auto px-4 sm:px-6 py-6">
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-4">
           <button
             onClick={() => router.push(`/deck/${id}`)}
             className="flex items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 text-sm font-medium transition-colors"
@@ -216,6 +217,11 @@ export default function StudyPage() {
           <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">
             {currentIndex + 1} / {cards.length}
           </span>
+        </div>
+
+        {/* Pomodoro timer */}
+        <div className="flex justify-center mb-4">
+          <PomodoroTimer />
         </div>
 
         <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-1.5 mb-8">
