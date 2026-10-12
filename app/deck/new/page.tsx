@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { Suspense, useState, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Sparkles, Plus, Wand2, BookOpen, Loader2, ChevronDown, ChevronUp, X, Check, Upload, FileText } from 'lucide-react';
 import Navbar from '@/components/Navbar';
@@ -15,7 +15,7 @@ interface GeneratedCard {
 
 type Mode = 'ai' | 'manual' | 'csv';
 
-export default function NewDeckPage() {
+function NewDeckPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const isAIMode = searchParams.get('ai') === 'true';
@@ -308,5 +308,13 @@ export default function NewDeckPage() {
         </button>
       </main>
     </div>
+  );
+}
+
+export default function NewDeckPage() {
+  return (
+    <Suspense>
+      <NewDeckPageInner />
+    </Suspense>
   );
 }

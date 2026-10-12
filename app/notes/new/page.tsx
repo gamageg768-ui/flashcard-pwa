@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronLeft, Loader2, Save } from 'lucide-react';
@@ -12,7 +12,7 @@ interface DeckOption {
   color: string;
 }
 
-export default function NewNotePage() {
+function NewNotePageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const prefillDeckId = searchParams.get('deckId') || '';
@@ -118,5 +118,13 @@ export default function NewNotePage() {
         </div>
       </main>
     </div>
+  );
+}
+
+export default function NewNotePage() {
+  return (
+    <Suspense>
+      <NewNotePageInner />
+    </Suspense>
   );
 }
