@@ -60,7 +60,7 @@ export default function HomePage() {
             <ArrowRight className="w-5 h-5" />
           </Link>
           <Link
-            href="/demo"
+            href="/login"
             className="flex items-center gap-2 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all font-semibold text-lg"
           >
             <BookOpen className="w-5 h-5" />
