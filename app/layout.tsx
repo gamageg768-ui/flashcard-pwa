@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'FlashAI — AI-Powered Flashcards',
-  description: 'Create and study smart flashcards powered by Groq AI & Llama 3 70B',
+  description: 'Create and study smart flashcards powered by Groq AI & GPT-OSS 120B',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     title: 'FlashAI — AI-Powered Flashcards',
-    description: 'Smart flashcards powered by Groq AI & Llama 3 70B',
+    description: 'Smart flashcards powered by Groq AI & GPT-OSS 120B',
   },
 };
 

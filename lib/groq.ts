@@ -54,7 +54,7 @@ Return ONLY a valid JSON array (no markdown, no explanation):
 ]`;
 
   const completion = await getGroq().chat.completions.create({
-    model: 'llama-3.3-70b-versatile',
+    model: 'openai/gpt-oss-120b',
     messages: [
       {
         role: 'system',
@@ -79,7 +79,7 @@ Return ONLY a valid JSON array (no markdown, no explanation):
 
 export async function explainCard(front: string, back: string): Promise<string> {
   const completion = await getGroq().chat.completions.create({
-    model: 'llama-3.3-70b-versatile',
+    model: 'openai/gpt-oss-120b',
     messages: [
       {
         role: 'system',
@@ -99,7 +99,7 @@ export async function explainCard(front: string, back: string): Promise<string> 
 
 export async function generateHint(front: string, back: string): Promise<string> {
   const completion = await getGroq().chat.completions.create({
-    model: 'llama-3.3-70b-versatile',
+    model: 'openai/gpt-oss-120b',
     messages: [
       {
         role: 'system',
@@ -126,7 +126,7 @@ export async function chatWithAI(
     : 'You are a helpful AI tutor. Help students understand and learn various concepts. Be concise, clear, and educational.';
 
   const completion = await getGroq().chat.completions.create({
-    model: 'llama-3.3-70b-versatile',
+    model: 'openai/gpt-oss-120b',
     messages: [
       { role: 'system', content: systemPrompt },
       ...messages,
@@ -141,7 +141,7 @@ export async function chatWithAI(
 export async function summariseNote(content: string): Promise<string> {
   const trimmed = content.slice(0, 4000);
   const completion = await getGroq().chat.completions.create({
-    model: 'llama-3.3-70b-versatile',
+    model: 'openai/gpt-oss-120b',
     messages: [
       {
         role: 'system',
@@ -158,7 +158,7 @@ export async function summariseNote(content: string): Promise<string> {
 export async function extractCardsFromNote(content: string): Promise<GeneratedCard[]> {
   const trimmed = content.slice(0, 4000);
   const completion = await getGroq().chat.completions.create({
-    model: 'llama-3.3-70b-versatile',
+    model: 'openai/gpt-oss-120b',
     messages: [
       {
         role: 'system',

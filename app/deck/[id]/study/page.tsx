@@ -327,7 +327,7 @@ export default function StudyPage() {
             <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 dark:border-gray-800">
               <div>
                 <h3 className="font-semibold text-gray-900 dark:text-gray-100">AI Tutor</h3>
-                <p className="text-xs text-gray-500 dark:text-gray-400">Llama 3 70B via Groq</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">GPT-OSS 120B via Groq</p>
               </div>
               <button onClick={() => setShowChat(false)} className="w-8 h-8 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center justify-center">
                 <X className="w-4 h-4 text-gray-500 dark:text-gray-400" />

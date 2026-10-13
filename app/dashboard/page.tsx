@@ -99,7 +99,7 @@ export default function DashboardPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Generate with AI</h3>
-                  <p className="text-indigo-200 text-sm">Create a full deck on any topic with Llama 3 70B</p>
+                  <p className="text-indigo-200 text-sm">Create a full deck on any topic with GPT-OSS 120B</p>
                 </div>
               </div>
               <Link

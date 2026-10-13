@@ -180,7 +180,7 @@ function NewDeckPageInner() {
             <div className="flex items-center gap-2 mb-4">
               <Sparkles className="w-5 h-5 text-indigo-600" />
               <h2 className="font-semibold text-gray-900 dark:text-gray-100">AI Generation</h2>
-              <span className="text-xs bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-400 px-2 py-0.5 rounded-full font-medium">Llama 3 70B</span>
+              <span className="text-xs bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-400 px-2 py-0.5 rounded-full font-medium">GPT-OSS 120B</span>
             </div>
             <div className="space-y-4">
               <div>
@@ -217,7 +217,7 @@ function NewDeckPageInner() {
                 disabled={generating || !topic.trim()}
                 className="w-full flex items-center justify-center gap-2 bg-indigo-600 text-white py-3 rounded-xl hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-semibold"
               >
-                {generating ? <><Loader2 className="w-4 h-4 animate-spin" />Generating with Llama 3 70B...</> : <><Wand2 className="w-4 h-4" />Generate {cardCount} Flashcards</>}
+                {generating ? <><Loader2 className="w-4 h-4 animate-spin" />Generating with GPT-OSS 120B...</> : <><Wand2 className="w-4 h-4" />Generate {cardCount} Flashcards</>}
               </button>
             </div>
           </div>
